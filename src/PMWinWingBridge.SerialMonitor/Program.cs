@@ -82,7 +82,7 @@ port.DataReceived += (_, _) =>
             if (read != buffer.Length) Array.Resize(ref buffer, read);
 
             var timestamp = DateTime.Now;
-            var hex = Convert.ToHexString(buffer, " ");
+            var hex = BitConverter.ToString(buffer).Replace("-", " ");
             var ascii = ToPrintableAscii(buffer);
             var line = $"{timestamp:HH:mm:ss.fff} RX {buffer.Length,4} | {hex} | {ascii}";
 
