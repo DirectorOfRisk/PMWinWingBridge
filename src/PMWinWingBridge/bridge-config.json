@@ -1,0 +1,24 @@
+{
+  "Devices": [
+    {
+      "Role": "Captain",
+      "UsbIdentity": "DESC:UsbVendorId=16536; UsbProductId=47925; Device=WinWingPfp3N; DeviceUser=Captain; DeviceType=Boeing737NGPfp; Description=Winwing PFP-3N (Captain)",
+      "UsbDescription": "UsbVendorId=16536; UsbProductId=47925; Device=WinWingPfp3N; DeviceUser=Captain; DeviceType=Boeing737NGPfp; Description=Winwing PFP-3N (Captain)",
+      "ComPort": "COM4",
+      "BaudRate": 38400,
+      "Enabled": true
+    }
+  ],
+  "DisplayBrightnessPercent": 80,
+  "BacklightBrightnessPercent": 70,
+  "LedBrightnessPercent": 70,
+  "ReconnectIntervalMs": 2000,
+  "LedSelfTestOnStart": false,
+  "LogKeyReleases": false,
+  "PlaceholderCharacter": "\u25A1",
+  "FontEnabled": true,
+  "FontFile": "Fonts\\b612-font-21x31.json",
+  "FontUseFullWidth": false,
+  "FontAutoDownload": true,
+  "FontDownloadUrl": "https://raw.githubusercontent.com/vradarserver/cduhub/main/library/cduhub/Resources/b612-font-21x31.json"
+}
