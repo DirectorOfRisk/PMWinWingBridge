@@ -1,0 +1,65 @@
+name: Feature request
+description: Suggest an improvement or new capability for PMWinWingBridge
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement.
+
+        Please describe the use case rather than only the implementation you have in mind.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Project Magenta protocol
+        - WinWing hardware
+        - Display / font
+        - LEDs
+        - Keyboard / key mapping
+        - Multi-CDU
+        - USB reconnect
+        - COM / serial connection
+        - Configuration / setup
+        - Packaging / installer
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: What are you trying to achieve?
+      placeholder: Describe the simulator setup or workflow that would benefit.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Requested behavior
+      description: What would you like PMWinWingBridge to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you tried another solution or workaround?
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add screenshots, examples, links or hardware details if useful.
+    validations:
+      required: false

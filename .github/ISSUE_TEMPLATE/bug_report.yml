@@ -1,0 +1,157 @@
+name: Bug report
+description: Report a reproducible problem with PMWinWingBridge
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve PMWinWingBridge.
+
+        Please provide as much information as possible. Logs are especially useful for USB, COM-port, display, LED and multi-CDU problems.
+
+  - type: input
+    id: bridge_version
+    attributes:
+      label: PMWinWingBridge version
+      description: Example: v1.0.0
+      placeholder: v1.0.0
+    validations:
+      required: true
+
+  - type: input
+    id: windows_version
+    attributes:
+      label: Windows version
+      description: Example: Windows 11 Pro 24H2
+      placeholder: Windows 11 Pro 24H2
+    validations:
+      required: true
+
+  - type: input
+    id: project_magenta_version
+    attributes:
+      label: Project Magenta version
+      description: Enter the CDU/RCDU version if known.
+      placeholder: CDU version / build
+    validations:
+      required: false
+
+  - type: dropdown
+    id: cdu_role
+    attributes:
+      label: CDU role
+      options:
+        - Captain
+        - First Officer
+        - Observer
+        - Multiple CDUs
+        - Not applicable
+    validations:
+      required: true
+
+  - type: input
+    id: winwing_model
+    attributes:
+      label: WinWing device
+      description: Example: PFP-3N
+      placeholder: PFP-3N
+    validations:
+      required: true
+
+  - type: input
+    id: usb_identity
+    attributes:
+      label: UsbIdentity
+      description: Copy the configured UsbIdentity if relevant. You may redact part of a serial number if you prefer.
+      placeholder: SERIAL:... or PATH:...
+    validations:
+      required: false
+
+  - type: input
+    id: com_setup
+    attributes:
+      label: COM-port setup
+      description: Include both sides of the virtual null-modem pair.
+      placeholder: Project Magenta COM3 <-> Bridge COM4
+    validations:
+      required: true
+
+  - type: dropdown
+    id: virtual_serial
+    attributes:
+      label: Virtual serial-port software
+      options:
+        - HHD Virtual Serial Ports
+        - com0com
+        - Eltima Virtual Serial Port Driver
+        - Other
+        - Not sure
+    validations:
+      required: false
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem description
+      description: What went wrong?
+      placeholder: Describe the problem clearly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: List the exact steps that trigger the problem.
+      placeholder: |
+        1. Start CDU.exe
+        2. Start PMWinWingBridge
+        3. Press ...
+        4. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: What happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Paste the relevant part of Logs/bridge-*.log. Do not post credentials or unrelated private information.
+      render: text
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Screenshots, hardware details, observations or anything else that may help.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I checked that no other application is using the same WinWing CDU or bridge COM port.
+          required: true
+        - label: I checked the README and existing issues for the same problem.
+          required: true

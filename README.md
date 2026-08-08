@@ -365,3 +365,16 @@ their respective owners. No endorsement by those parties is implied.
 Copyright © 2026 Robert Kossakowski
 
 Developed with assistance from OpenAI ChatGPT.
+## Feedback, bug reports and feature requests
+
+Community feedback is welcome.
+
+- **Reproducible bugs:** open a GitHub Issue and use the **Bug report** form.
+- **Feature requests:** open a GitHub Issue and use the **Feature request** form.
+- **Questions, setup help and general feedback:** use GitHub Discussions.
+
+When reporting USB, serial, display or LED problems, please include the
+relevant portion of `Logs/bridge-*.log` and describe the Project Magenta /
+virtual-COM configuration.
+
+See [SUPPORT.md](SUPPORT.md) for reporting guidelines.
